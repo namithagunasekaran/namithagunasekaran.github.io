@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 import ProfileDescription from "../components/ProfileDescription";
 import { mobile } from "../responsive/reponsive";
 import GlobalStyles from "../styles/GlobalStyles";
-import { fadein } from "./work/animation";
+import { fadein } from "../animation/animation";
 
 interface profileProps {}
 const ProfileDescriptionContainer = styled.header`

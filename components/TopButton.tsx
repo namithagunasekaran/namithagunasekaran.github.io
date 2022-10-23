@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { fadein } from "../pages/work/animation";
+import { fadein } from "../animation/animation";
 
 interface TopButtonProps {}
 

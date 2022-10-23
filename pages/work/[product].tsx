@@ -9,7 +9,7 @@ import Navbar from "../../components/Navbar";
 import { coverCardInfo, productDetails } from "../../data";
 import { mobile } from "../../responsive/reponsive";
 import GlobalStyle from "../../styles/GlobalStyles";
-import { fadein } from "./animation";
+import { fadein } from "../../animation/animation";
 const Container = styled.main`
     margin-left: auto;
     margin-right: auto;

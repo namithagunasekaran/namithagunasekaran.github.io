@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { fadein } from "../pages/work/animation";
+import { fadein } from "../animation/animation";
 import GlobalStyle from "../styles/GlobalStyles";
 import Modal from "./Modal";
 

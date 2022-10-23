@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { slideRight } from "../pages/work/animation";
+import { slideRight } from "../animation/animation";
 import { mobile } from "../responsive/reponsive";
 
 type ContainerType = {

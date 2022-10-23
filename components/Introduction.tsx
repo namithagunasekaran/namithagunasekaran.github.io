@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { fadein } from "../pages/work/animation";
+import { fadein } from "../animation/animation";
 import { mobile } from "../responsive/reponsive";
 
 const Container = styled.section`
