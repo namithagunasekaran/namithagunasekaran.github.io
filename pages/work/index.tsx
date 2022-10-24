@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import * as React from "react";
-import { useRef } from "react";
-import styled, { css } from "styled-components";
-import { generateAnimation, slideRight } from "../../animation/animation";
+import styled from "styled-components";
 import ImageCard from "../../components/ImageCard";
 import Introduction from "../../components/Introduction";
 import Navbar from "../../components/Navbar";
