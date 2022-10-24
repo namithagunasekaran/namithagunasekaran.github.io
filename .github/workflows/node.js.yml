@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "public" ]
+    branches: [ "gh-pages-preview" ]
   pull_request:
-    branches: [ "public" ]
+    branches: [ "gh-pages-preview" ]
 
 jobs:
   build:
