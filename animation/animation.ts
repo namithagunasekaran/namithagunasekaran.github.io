@@ -1,4 +1,5 @@
-import { keyframes } from "styled-components";
+import { css, keyframes } from "styled-components";
+import { coverCardInfo } from "../data";
 
 export const fadein = keyframes`
         0% {

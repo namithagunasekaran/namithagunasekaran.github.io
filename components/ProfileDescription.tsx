@@ -20,7 +20,6 @@ const Container = styled.section`
 const Head = styled.h1`
     text-align: center;
     padding-bottom: 20px;
-    font-family: sans-serif;
     ${
         mobile({
             fontSize: '20px'

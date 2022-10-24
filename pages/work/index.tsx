@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 import * as React from "react";
-import styled from "styled-components";
+import { useRef } from "react";
+import styled, { css } from "styled-components";
+import { generateAnimation, slideRight } from "../../animation/animation";
 import ImageCard from "../../components/ImageCard";
 import Introduction from "../../components/Introduction";
 import Navbar from "../../components/Navbar";
@@ -9,7 +11,6 @@ import TopButton from "../../components/TopButton";
 import { coverCardInfo } from "../../data";
 import { mobile } from "../../responsive/reponsive";
 import GlobalStyle from "../../styles/GlobalStyles";
-
 const Container = styled.main`
     ${mobile({
         margin: "0px",
@@ -36,6 +37,7 @@ const IntroductionContainer = styled.section`
         padding: "38px 0px 34px 0px",
     })}
 `;
+
 const ImageCardContainer = styled.div`
     max-width: 1200px;
     height: 430px;
@@ -57,6 +59,7 @@ const TopButtonContainer = styled.div`
     width: 60px;
     right: 40px;
 `;
+
 interface indexProps {}
 
 const index: React.FC<indexProps> = ({}) => {
@@ -77,7 +80,7 @@ const index: React.FC<indexProps> = ({}) => {
                 if (idx % 2 === 0) {
                     return (
                         <Link href={`/work/${cci.name}`} key={cci.id}>
-                            <ImageCardContainer>
+                            <ImageCardContainer className="image-container">
                                 <ImageCard
                                     direction="left"
                                     title={cci.title}

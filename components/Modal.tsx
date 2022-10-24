@@ -10,14 +10,11 @@ interface ModalProps {
     // next: any;
     // prev: any;
 }
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100%:
-    width :100%;
-`;
+
 const ModalWrapper = styled.div`
     position: fixed;
+    height: 100%;
+    width: 100%;
     inset: 0;
     display: flex;
     margin: 0 auto;

@@ -58,12 +58,14 @@ const ImageContainer = styled.section`
 const Image = styled.img`
     width: 100%;
     object-fit: cover;
+    cursor: zoom-in;
 `;
 const ImageTileContainer = styled.div`
     width: 100%;
     display: flex;
     margin-bottom: 30px;
     justify-content: space-between;
+
 `;
 const Title = styled.div`
     padding-top: 60px;
@@ -79,9 +81,12 @@ const Title = styled.div`
 const ModalContainer = styled.div`
     display: flex;
     align-items: center;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
 `;
 const ModalImage = styled.img`
-    height: 100%;
+    height: 92%;
     animation: ${fadein} 1s ease running;
     width: 100%;
     object-fit: contain;
@@ -102,7 +107,7 @@ const Arrow = styled.div`
 `;
 const CloseButton = styled.div`
     margin-left: auto;
-    padding: 30px 0px;
+    padding: 10px 0px;
     cursor: pointer;
     font-weight: 800;
     ${
@@ -115,6 +120,10 @@ const CloseButton = styled.div`
 const ProductView = styled.div`
     display: flex;
     align-items: center;
+    ${mobile({
+        width: '100%',
+        height: '100%',
+    })}
 `;
 const ModalComponents = styled.div`
     height: 100%;

@@ -39,18 +39,6 @@ const DetailTitle = styled.div`
     })}
 `;
 
-const Year = styled.div`
-    color: rgb(153, 153, 153);
-    float: none;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    margin: auto;
-    text-align: center;
-    text-transform: none;
-    width: 100%;
-`;
 const Container = styled.div`
     display: flex;
     max-width: calc(33.3333% - 13px);
@@ -100,7 +88,6 @@ const ImageTile: React.FC<ImageTileProps> = ({ title, imgSrc, name }) => {
                 </ImageContainer>
                 <DetailsContainer>
                     <DetailTitle>{title}</DetailTitle>
-                    <Year>2022</Year>
                 </DetailsContainer>
             </Container>
         </Link>
