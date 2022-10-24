@@ -1,5 +1,5 @@
-import Head from "next/head";
 import Link from "next/link";
+import Head from "next/head";
 import * as React from "react";
 import styled from "styled-components";
 import ImageCard from "../../components/ImageCard";

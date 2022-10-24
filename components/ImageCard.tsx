@@ -95,7 +95,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ direction, title, imgsrc }) => {
         <Container direction={direction}>
             <ImageContainer>
                 <ImageOverlay></ImageOverlay>
-                <Image src={imgsrc}></Image>
+                <Image src={imgsrc} alt={title}></Image>
             </ImageContainer>
             <CoverTitleContainer>
                 <CoverTitle>{title}</CoverTitle>

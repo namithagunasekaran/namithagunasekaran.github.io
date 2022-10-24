@@ -1,8 +1,7 @@
-import Link from "next/link";
 import * as React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive/reponsive";
-
+import Link from 'next/link';
 const ImageOverlay = styled.div`
     background: black;
     position: absolute;
@@ -84,7 +83,7 @@ const ImageTile: React.FC<ImageTileProps> = ({ title, imgSrc, name }) => {
             <Container>
                 <ImageContainer>
                     <ImageOverlay></ImageOverlay>
-                    <Image src={imgSrc} />
+                    <Image src={imgSrc} alt={name}/>
                 </ImageContainer>
                 <DetailsContainer>
                     <DetailTitle>{title}</DetailTitle>
