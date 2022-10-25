@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
@@ -13,6 +12,7 @@ const nextConfig = {
     },
     basePath: "",
     assetPrefix: "",
+    trailingSlash: true,
 };
 
 module.exports = nextConfig;
