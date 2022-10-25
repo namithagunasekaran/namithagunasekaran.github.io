@@ -89,7 +89,7 @@ const index: React.FC<indexProps> = ({}) => {
                     );
                 } else {
                     return (
-                        <Link href={`/work/${cci.name}`} key={cci.id}>
+                        <Link href={`/work/[product]`} as={`/work/${cci.name}`} key={cci.id}>
                             <ImageCardContainer key={cci.id}>
                                 <ImageCard
                                     direction="right"

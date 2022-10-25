@@ -21,6 +21,7 @@ const Logo = styled.img`
 `;
 const SeeMore = styled.a`
     text-decoration: none;
+    color: #999999;
     &:visited {
         color :unset;
     }
