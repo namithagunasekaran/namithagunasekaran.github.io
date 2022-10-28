@@ -9,6 +9,7 @@ import Navbar from "../../components/Navbar";
 import { coverCardInfo, productDetails } from "../../data";
 import { mobile } from "../../responsive/reponsive";
 import GlobalStyle from "../../styles/GlobalStyles";
+import Image from "next/image";
 import { fadein } from "../../animation/animation";
 const Container = styled.main`
     margin-left: auto;
@@ -18,7 +19,7 @@ const Container = styled.main`
 `;
 const NavbarContainer = styled.header`
     height: 100px;
-    padding: 30px 0% 0px;
+    padding: 30px 0% 0px; 
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -55,7 +56,7 @@ const ImageContainer = styled.section`
     max-width: 100%;
     margin-bottom: 20px;
 `;
-const Image = styled.img`
+const ProductImage = styled(Image)`
     width: 100%;
     object-fit: cover;
     cursor: zoom-in;
@@ -65,7 +66,6 @@ const ImageTileContainer = styled.div`
     display: flex;
     margin-bottom: 30px;
     justify-content: space-between;
-
 `;
 const Title = styled.div`
     padding-top: 60px;
@@ -85,7 +85,7 @@ const ModalContainer = styled.div`
     justify-content: center;
     width: 100%;
 `;
-const ModalImage = styled.img`
+const ModalImage = styled(Image)`
     height: 92%;
     animation: ${fadein} 1s ease running;
     width: 100%;
@@ -100,7 +100,7 @@ const Arrow = styled.div`
     margin: 0 5px;
     border-radius: 50%;
     ${mobile({
-        padding:'5px',
+        padding: "5px",
         fontSize: "5px",
     })}
     cursor: pointer;
@@ -110,19 +110,17 @@ const CloseButton = styled.div`
     padding: 10px 0px;
     cursor: pointer;
     font-weight: 800;
-    ${
-        mobile({
-            fontSize: '8px',
-            padding: '30px 10px'
-        })
-    }
+    ${mobile({
+        fontSize: "8px",
+        padding: "30px 10px",
+    })}
 `;
 const ProductView = styled.div`
     display: flex;
     align-items: center;
     ${mobile({
-        width: '100%',
-        height: '100%',
+        width: "100%",
+        height: "100%",
     })}
 `;
 const ModalComponents = styled.div`
@@ -188,7 +186,7 @@ const Work: React.FC<WorkProps> = ({}) => {
                             key={idx}
                             onClick={() => clickEvent(idx)}
                         >
-                            <Image src={img} alt="product" />
+                            <ProductImage src={img} alt="product" />
                         </ImageContainer>
                     );
                 })}
@@ -223,6 +221,7 @@ const Work: React.FC<WorkProps> = ({}) => {
                         <Arrow onClick={() => go(-1)}>←</Arrow>
                         <ModalContainer>
                             <ModalImage
+                                alt="img"
                                 src={
                                     product &&
                                     productDetails[product].images[index]
