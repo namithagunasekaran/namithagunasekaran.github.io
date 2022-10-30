@@ -84,7 +84,7 @@ const ImageTile: React.FC<ImageTileProps> = ({ title, imgSrc, name }) => {
             <Container>
                 <ImageContainer>
                     <ImageOverlay></ImageOverlay>
-                    <Image src={imgSrc} />
+                    <Image src={imgSrc} alt={name}/>
                 </ImageContainer>
                 <DetailsContainer>
                     <DetailTitle>{title}</DetailTitle>

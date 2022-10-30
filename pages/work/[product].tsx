@@ -9,7 +9,6 @@ import Navbar from "../../components/Navbar";
 import { coverCardInfo, productDetails } from "../../data";
 import { mobile } from "../../responsive/reponsive";
 import GlobalStyle from "../../styles/GlobalStyles";
-import Image from "next/image";
 import { fadein } from "../../animation/animation";
 const Container = styled.main`
     margin-left: auto;
@@ -56,7 +55,7 @@ const ImageContainer = styled.section`
     max-width: 100%;
     margin-bottom: 20px;
 `;
-const ProductImage = styled(Image)`
+const ProductImage = styled.img`
     width: 100%;
     object-fit: cover;
     cursor: zoom-in;
@@ -85,7 +84,7 @@ const ModalContainer = styled.div`
     justify-content: center;
     width: 100%;
 `;
-const ModalImage = styled(Image)`
+const ModalImage = styled.img`
     height: 92%;
     animation: ${fadein} 1s ease running;
     width: 100%;
