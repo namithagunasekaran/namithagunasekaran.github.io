@@ -10,6 +10,7 @@ import { coverCardInfo, productDetails } from "../../data";
 import { mobile } from "../../responsive/reponsive";
 import GlobalStyle from "../../styles/GlobalStyles";
 import { fadein } from "../../animation/animation";
+import { NextPageContext } from "next";
 const Container = styled.main`
     margin-left: auto;
     margin-right: auto;
@@ -18,7 +19,7 @@ const Container = styled.main`
 `;
 const NavbarContainer = styled.header`
     height: 100px;
-    padding: 30px 0% 0px; 
+    padding: 30px 0% 0px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -128,9 +129,33 @@ const ModalComponents = styled.div`
     display: flex;
     flex-direction: column;
 `;
-interface WorkProps {}
+export const getStaticPaths = async () => {
+    const paths = coverCardInfo.map((cci) => {
+        return {
+            params: { product: cci.name.toString() },
+        };
+    });
+    return {
+        paths,
+        fallback: false,
+    };
+};
+
+export const getStaticProps = async (context: any) => {
+    const name = context.params.product as ObjectKey;
+    const data = productDetails[name];
+
+    return {
+        props: {
+            productDets: data,
+        },
+    };
+};
+interface WorkProps {
+    productDets: any;
+}
 type ObjectKey = keyof typeof productDetails;
-const Work: React.FC<WorkProps> = ({}) => {
+const Work: React.FC<WorkProps> = ({ productDets }) => {
     const [moreProducts, setMoreProducts] = useState<typeof coverCardInfo>([]);
     const [showModal, setShowModal] = useState(false);
     const [index, setIndex] = useState(0);
@@ -176,19 +201,15 @@ const Work: React.FC<WorkProps> = ({}) => {
                 <Navbar />
             </NavbarContainer>
             <HeaderContainer>
-                <Header>{product && productDetails[product].title}</Header>
+                <Header>{productDets.title}</Header>
             </HeaderContainer>
-            {product &&
-                productDetails[product].images.map((img, idx) => {
-                    return (
-                        <ImageContainer
-                            key={idx}
-                            onClick={() => clickEvent(idx)}
-                        >
-                            <ProductImage src={img} alt="product" />
-                        </ImageContainer>
-                    );
-                })}
+            {productDets.images.map((img: string, idx: number) => {
+                return (
+                    <ImageContainer key={idx} onClick={() => clickEvent(idx)}>
+                        <ProductImage src={img} alt="product" />
+                    </ImageContainer>
+                );
+            })}
             <Title>You may also like</Title>
             <ImageTileContainer>
                 {product &&
@@ -206,7 +227,7 @@ const Work: React.FC<WorkProps> = ({}) => {
             </ImageTileContainer>
             <Modal
                 open={showModal}
-                // imgsrc={product && productDetails[product].images[index]}
+                // imgsrc={productDets.images[index]}
                 // next={() => go(1)}
                 // prev={() => go(-1)}
                 // // eslint-disable-next-line react/no-children-prop

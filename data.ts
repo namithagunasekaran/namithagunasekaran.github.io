@@ -89,6 +89,7 @@ export const productDetails = {
     //Tessere
     tessere: {
         id: 1,
+        name: "tessere",
         title: "Tessere - the woven story",
         images: [
             "/assets/tessere/tesere-pin.jpeg",
@@ -102,6 +103,7 @@ export const productDetails = {
     //SpaceWise
     spacewise: {
         id: 2,
+        name: "spacewise",
         title: "SPACEWISE- A multi functional and transformable desk.",
         images: [
             "/assets/spacewise/spacewise-pin.jpeg",
@@ -119,6 +121,7 @@ export const productDetails = {
     //Isu
     isu: {
         id: 3,
+        name: "isu",
         title: 'ISU -"an Innovatively Simple Upholstered chair"',
         images: [
             "/assets/isu/isu-pin.jpeg",
@@ -133,6 +136,7 @@ export const productDetails = {
     //C'trick
     ctrick: {
         id: 4,
+        name: "ctrick",
         title: "The C'trick sofa.",
         images: [
             "/assets/ctrick/ctrick-pin.jpeg",
@@ -146,6 +150,7 @@ export const productDetails = {
     //Accanto
     accanto: {
         id: 5,
+        name: "accanto",
         title: "\"ACCANTO\" meaning 'alongside'",
         images: [
             "/assets/accanto/accanto-pin.jpeg",
@@ -159,6 +164,7 @@ export const productDetails = {
     //Acudil
     acudil: {
         id: 6,
+        name: "acudil",
         title: "ACUDIL -The acute coffee table",
         images: [
             "/assets/acudil/acudil-pin.jpeg",
@@ -171,6 +177,7 @@ export const productDetails = {
     //HurlyBurly
     hurlyburly: {
         id: 7,
+        name: "hurlyburly",
         title: "Hurly-Burly",
         images: [
             "/assets/hubu/hubu-pin.jpeg",
@@ -183,6 +190,7 @@ export const productDetails = {
     //Wingly
     wingly: {
         id: 8,
+        name: "wingly",
         title: "Wingly! the wooden bird.",
         images: [
             "/assets/wingly/wingly-pin.jpeg",
@@ -194,6 +202,7 @@ export const productDetails = {
     //Coaster
     coaster: {
         id: 9,
+        name: "coaster",
         title: "The Coaster chair",
         images: [
             "/assets/coaster/coaster-pin.jpeg",
@@ -206,6 +215,7 @@ export const productDetails = {
     //Grandiosa
     grandiosa: {
         id: 10,
+        name: "grandiosa",
         title: "A Grandiosa dining",
         images: [
             "/assets/grandiosa/grandiosa-1.jpeg",
@@ -218,6 +228,7 @@ export const productDetails = {
     //FDL
     fdl: {
         id: 11,
+        name: "fdl",
         title: "A Grandiosa dining",
         images: [
             "/assets/fdl/fdl-pin.jpeg",
@@ -232,6 +243,7 @@ export const productDetails = {
     //Elfcup
     elfcup: {
         id: 12,
+        name: "elfcup",
         title: "'Elfcup' A lamp collection inspired by nature.",
         images: [
             "/assets/elfcup/elfcup-pin.jpeg",
@@ -252,15 +264,13 @@ export const productDetails = {
 
 export const contacts = [
     {
-        profile_image:
-            "/assets/logo/whatsapp-logo.png",
+        profile_image: "/assets/logo/whatsapp-logo.png",
         image: "/assets/logo/whatsapp-logo.png",
         username: "+91 - 9843421308",
         link: "https://wa.me/9843421308",
     },
     {
-        profile_image:
-            "/assets/logo/gmail.png",
+        profile_image: "/assets/logo/gmail.png",
         image: "/assets/logo/gmail.png",
         username: "namithag23@gmail.com",
         link: "mailto:namithag23@gmail.com",
